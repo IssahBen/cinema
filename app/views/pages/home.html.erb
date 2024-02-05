@@ -1,0 +1,24 @@
+
+ <div> 
+ 
+    <div class="navbar">
+     <div class="icon">
+        <img src='<%=asset_url('icon.png')%>'>
+    </div>
+       
+        <a href="#" class="find"><img src="<%=asset_url('search.png')%>" class="searchbtn"></a>
+    </div>
+  
+    <div class="form">
+       <%= form_with url: show_path, method: :get do |form| %>
+            <div class="forminput mb-3">
+                <%= form.label :query, "Search for:" ,class: "form-label"%>
+                <%= form.text_field :query,class: "form-control" %>
+                <%= form.submit  "Search",class: "btn btn-outline-primary btn-lg" %>
+            </div>   
+    <% end %>
+      
+    
+</div>
+
+  
