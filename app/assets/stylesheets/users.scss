@@ -1,3 +1,43 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.header {
+    color: black;
+}
+
+.card {
+    height: 50vh;
+
+}
+
+.maincard {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.title {
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.card-body {
+    background-color: black;
+    color: bisque;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card {
+    border-radius: 30%;
+}
+
+.main {
+    display: flex;
+
+}

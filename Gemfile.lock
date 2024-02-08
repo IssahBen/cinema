@@ -140,6 +140,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
+    pexels (0.4.0)
+      requests (~> 1.0.2)
     popper_js (2.11.8)
     public_suffix (5.0.4)
     puma (5.6.8)
@@ -185,6 +187,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.9.0)
+    requests (1.0.2)
     rexml (3.2.6)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
@@ -243,6 +246,7 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (4.0.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.12)
@@ -264,6 +268,7 @@ DEPENDENCIES
   faraday (~> 2.7, >= 2.7.11)
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  pexels (~> 0.4.0)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.7, >= 6.1.7.6)
@@ -276,6 +281,7 @@ DEPENDENCIES
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
+  will_paginate (~> 4.0)
 
 RUBY VERSION
    ruby 3.3.0p0

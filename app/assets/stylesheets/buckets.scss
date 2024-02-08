@@ -1,0 +1,64 @@
+// Place all the styles related to the buckets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 20px;
+
+}
+
+#card {
+    height: 20%;
+
+
+}
+
+.form-fields {
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.remove-button {
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+}
+
+.bucket-movies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.note {
+    color: white;
+}
+
+.search_bar {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.form-field-add {
+    color: black;
+    background-color: #30e8bf;
+    border-radius: 10px;
+
+
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

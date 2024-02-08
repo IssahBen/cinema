@@ -7,31 +7,58 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
      
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<%= login_path %>">Sign in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<%= new_user_path %>">Sign up</a>
-          </li>
-          <% if logged_in? %> 
+        
+          <% if !logged_in? %> 
+              <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="<%= login_path %>">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<%= new_user_path %>">Sign up</a>
+            </li>
+          <% else %>
             <li class="nav-item">
               <%= button_to "log out ",logout_path,class:"btn",method: :delete%>
             </li>
 
+             <li class="nav-item">
+              <%= link_to "Profile[#{current_user.username.upcase}]",user_path(current_user),class:"btn"%>
+            </li>
+             <% if @redirect_to_page_id %>
+            <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Actions
+                      </a>
+                     
+                        <ul class="dropdown-menu">
+                      
+                          <li><a class="dropdown-item" href="<%=  new_bucket_path %>">Create Bucket</a></li>
+                          
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Edit password</a></li>
+                          <li><a class="dropdown-item" href="#">Delete Account</a></li>
+                        </ul>
+                     
+            </li>
+             <% end %>
          <% end %> 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
+          <% unless @redirect_to_page_id    %>
+              <% if current_user && current_bucket %>
+                <li class="nav-item">
+                <%= link_to "Bucket[{current_bucket.title}]",bucket_path(current_bucket),class:"btn"%>
+                </li>
+              <% end %>  
+            <% end %>
        
       </ul>
+
+      <%if  !@redirect_to_page_id && current_user && current_bucket %>
+        <%=form_with url: bucket_path(current_bucket) ,class:"d-flex" , method: :get  do |form| %>
+            
+                  <%= form.text_field :query, class: "form-control me-2" %>
+                  <%= form.submit  "Search",class: "btn btn-outline-success btn-lg" %>
+            
+        <% end%>
+      <% end %>
     </div>
   </div>
 </nav>

@@ -20,7 +20,9 @@ class SessionsController < ApplicationController
 
     def destroy 
         if session[:user_id]
+            session[:bucket_id]= nil
             session[:user_id]= nil 
+
             flash[:notice]="logout Successful"
             redirect_to root_path
         else

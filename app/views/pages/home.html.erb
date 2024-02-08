@@ -4,7 +4,7 @@
     <div class="navbar">
      <div class="icon">
         <img src='<%=asset_url('icon.png')%>'>
-    </div>
+        </div>
        
         <a href="#" class="find"><img src="<%=asset_url('search.png')%>" class="searchbtn"></a>
     </div>
@@ -16,9 +16,12 @@
                 <%= form.text_field :query,class: "form-control" %>
                 <%= form.submit  "Search",class: "btn btn-outline-primary btn-lg" %>
             </div>   
-    <% end %>
+        <% end %>
+    </div>
       
     
 </div>
+
+<%= render "slide"%>
 
   

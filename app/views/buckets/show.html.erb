@@ -1,0 +1,33 @@
+    
+    <div class="form">
+       <%= form_with url: bucket_path, method: :get do |form| %>
+            <div class="forminput mb-3">
+                <%= form.label :query, "Search for:" ,class: "form-label"%>
+                <%= form.text_field :query,class: "form-control" %>
+                <%= form.submit  "Search",class: "btn btn-outline-primary btn-lg" %>
+            </div>   
+        <% end %>
+        <p class=" note text-center"> Search for movies/Series to  Add to bucket </p>
+    </div>
+ <%  unless @user_searched %>
+    <div class="search_bar">
+        <%= form_with model: @bucket, class: "add-form" ,method: :patch,local: true do |f|%>
+                            
+                                <%= f.text_field  :Movie_Name, class: "form-field" ,placeholder:"Movie Name"%>
+                                <%=f.submit "Add Movie/Show",class: "form-field-add" %>
+
+        <% end %> 
+
+    </div>    
+
+        
+
+   <% end %>      
+   
+
+
+
+   <%= render "movieslide"%>
+  
+
+    

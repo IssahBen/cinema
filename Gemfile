@@ -64,3 +64,6 @@ gem 'faraday', '~> 2.7', '>= 2.7.11'
 gem 'bcrypt', '~> 3.1', '>= 3.1.5'
 
 gem 'bootstrap', '~> 5.2', '>= 5.2.3'
+
+gem 'pexels', '~> 0.4.0'
+gem 'will_paginate', '~> 4.0'

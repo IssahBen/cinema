@@ -10,7 +10,13 @@ Rails.application.routes.draw do
 
  delete "logout", to: "sessions#destroy"
 
+ delete "movies/:id", to:"movies#destroy", as: "movie"
+
+ resources :buckets
+
  resources :users
+
+
 
  
 end
