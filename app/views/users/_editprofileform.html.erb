@@ -27,27 +27,39 @@
 
                     </div>
                 </div>
-                   <div class="form-group row">
-                    <%= form.label :password,class: "col-2 col-form-label text-dark" %>
+                     <div class="form-group row">
+                        <%= form.label :old_password,class: "col-2 col-form-label text-dark" %>
 
-                    <div class= "col-10">
+                        <div class= "col-10">
 
 
-                        <%= form.password_field :password , class: "form-control rounded" ,placeholder:"choose a password" %>
+                            <%= form.password_field :old_password , class: "form-control rounded" ,placeholder:"choose a password" %>
 
+                        </div>
                     </div>
+                   <div class="form-group row">
+                        <%= form.label :new_password,class: "col-2 col-form-label text-dark" %>
+
+                        <div class= "col-10">
+
+
+                            <%= form.password_field :password , class: "form-control rounded" ,placeholder:"choose a password" %>
+
+                        </div>
                 </div>
                     <div class="form-group row">
-                    <%= form.label :password_confirmation,class: "col-2 col-form-label text-dark" %>
+                        <%= form.label :password_confirmation,class: "col-2 col-form-label text-dark" %>
 
-                    <div class= "col-10">
+                        <div class= "col-10">
 
 
-                        <%= form.password_field :password_confirmation , class: "form-control rounded" ,placeholder:"choose a password" %>
+                            <%= form.password_field :password_confirmation , class: "form-control rounded" ,placeholder:"choose a password" %>
 
+                        </div>
                     </div>
+
                 <div class= "form-group  text-center ">   
-                    <%= form.submit 'Signup' ,class: "btn btn-outline-primary btn-lg" %>
+                    <%= form.submit 'Save Changes' ,class: "btn btn-outline-primary btn-lg" %>
                 </div>
 
                 <% end %>

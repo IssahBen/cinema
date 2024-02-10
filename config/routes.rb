@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
  delete "movies/:id", to:"movies#destroy", as: "movie"
 
+
  resources :buckets
 
  resources :users

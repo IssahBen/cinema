@@ -53,6 +53,9 @@ class BucketsController < ApplicationController
         end
     end
 
+   
+
+
     private 
     def search(query)
             response= Faraday.new("http://www.omdbapi.com/?apikey=cae79c94&s=#{query}")
