@@ -10,7 +10,7 @@
         
           <% if !logged_in? %> 
               <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<%= login_path %>">Sign in</a>
+              <a class="nav-link" aria-current="page" href="<%= login_path %>">Sign in</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<%= new_user_path %>">Sign up</a>
@@ -44,7 +44,7 @@
           <% unless @redirect_to_page_id    %>
               <% if current_user && current_bucket %>
                 <li class="nav-item">
-                <%= link_to "Bucket[{current_bucket.title}]",bucket_path(current_bucket),class:"btn"%>
+                <%= link_to "Bucket[#{current_bucket.title}]",bucket_path(current_bucket),class:"btn"%>
                 </li>
               <% end %>  
             <% end %>

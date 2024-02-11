@@ -1,20 +1,23 @@
 
 <% if @buckets %>
-<div class="main" >
-  <% @buckets.each do |bucket| %>%
-    <div class="maincard">
-      <div class="card text-center" style="width: 18rem;">
-        <img src="https://thumbs.dreamstime.com/b/cinema-concept-paper-bucket-popcorn-film-tape-movie-eps-illustration-41160365.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%= bucket.title %></h5>
-          <p class="card-text"><%= bucket.description %></p>
-          <a href="<%= bucket_path(bucket) %>" class="btn btn-secondary">Open Bucket List</a>
-         <%= button_to "Delete Bucket ", bucket_path(bucket), class: " btn btn-secondary" , method: "delete" %>
-        </div>
+  
+  <div class="main" >
+    
+      <div class="maincard">
+        <% @buckets.each do |bucket| %>
+          <div class="card text-center" style="width: 18rem;">
+            <img src="https://thumbs.dreamstime.com/b/cinema-concept-paper-bucket-popcorn-film-tape-movie-eps-illustration-41160365.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= bucket.title %></h5>
+              <p class="card-text"><%= bucket.description %></p>
+              <a href="<%= bucket_path(bucket) %>" class="btn btn-secondary">Open Bucket List</a>
+            <%= button_to "Delete Bucket ", bucket_path(bucket), class: " btn btn-secondary" , method: "delete" %>
+            </div>
+
+          </div>
+        <% end %>
       </div>
-
-    </div>
-  <% end %>
- </div> 
-
+    
+  </div> 
+  
 <% end %>

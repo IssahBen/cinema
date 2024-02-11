@@ -1,9 +1,9 @@
     
     <div class="form">
-       <%= form_with url: bucket_path, method: :get do |form| %>
+       <%= form_with url: bucket_path,method: :get do |form| %>
             <div class="forminput mb-3">
                 <%= form.label :query, "Search for:" ,class: "form-label"%>
-                <%= form.text_field :query,class: "form-control" %>
+                <%= form.text_field :query,class: "search-field form-control" %>
                 <%= form.submit  "Search",class: "btn btn-outline-primary btn-lg" %>
             </div>   
         <% end %>

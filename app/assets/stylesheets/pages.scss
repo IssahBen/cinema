@@ -6,7 +6,8 @@
 }
 
 .container-fluid {
-    background-color: black
+    background-color: black;
+    border-radius: 20px;
 }
 
 .navbar {
@@ -14,21 +15,25 @@
     margin-top: 10px;
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 2px solid rgb(12, 255, 255);
+
     padding: 10px;
 
 }
 
 .navbar a {
-    background: #30e8bf;
+    background: black;
     border-radius: 10px;
     padding: 5px;
-    color: black;
+    color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
     text-decoration: none;
     border: 4px solid black;
     box-shadow: 1px 2px 10px 1px black;
+}
+
+.navbar a:hover {
+    background-color: #30e8bf;
 }
 
 .navbar img {
@@ -38,7 +43,10 @@
 
 body {
     background: linear-gradient(90deg, #e44d26, #f16529);
-    background-image: asset_url("background.jpg");
+    background-image: asset_url("movieposter.jpg");
+    display: flex;
+    justify-content: center;
+    padding: 50px;
 
 }
 
@@ -85,13 +93,7 @@ body {
     margin-bottom: 50px;
 }
 
-.label {
-    background: #30e8bf;
-    border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
-    cursor: pointer;
-    width: 50%
-}
+
 
 input[type=text] {
     width: 80%;
@@ -130,4 +132,53 @@ input[type=text] {
 img {
     height: 600px;
     border-radius: 10px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.forminput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-field {
+    background-color: black;
+    box-shadow: 15px 5px 20px black;
+    padding: 10px;
+}
+
+.banner {
+    color: #B4B4B8;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navblock {
+    background-color: orange;
+}
+
+.search-btn {
+    background-color: black;
+    color: white;
+}
+
+.about {
+    background-color: #374259;
+    padding: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+
+.paragraph-title {
+    color: white;
+}
+
+.paragraph {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

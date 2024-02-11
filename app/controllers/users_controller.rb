@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
     def show
         @redirect_to_page_id= true 
-        @bucket=current_user.buckets 
+        @buckets=current_user.buckets 
    
         
     end

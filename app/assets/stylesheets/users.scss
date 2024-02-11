@@ -18,9 +18,7 @@
 
 .title {
     color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .btn {
@@ -37,7 +35,16 @@
     border-radius: 30%;
 }
 
-.main {
+.maincard {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-around;
+    overflow: scroll;
+    height: fit-content;
+}
 
+.card {
+    height: auto;
 }
