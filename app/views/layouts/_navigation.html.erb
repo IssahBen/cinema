@@ -51,14 +51,7 @@
        
       </ul>
 
-      <%if  !@redirect_to_page_id && current_user && current_bucket %>
-        <%=form_with url: bucket_path(current_bucket) ,class:"d-flex" , method: :get  do |form| %>
-            
-                  <%= form.text_field :query, class: "form-control me-2" %>
-                  <%= form.submit  "Search",class: "btn btn-outline-success btn-lg" %>
-            
-        <% end%>
-      <% end %>
+     
     </div>
   </div>
 </nav>

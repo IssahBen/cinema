@@ -42,7 +42,7 @@ class UsersController < ApplicationController
                 render 'edit'
             end
         else
-            if @user.update(user_params)
+            if @user.update(edit_params)
                 flash[:notice]="Account Updated"
                 redirect_to @user
             else
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
             if @user.authenticate(old_password)
                 new_params=password_params
                 new_params.delete(:old_password)
-                return user_params.merge(new_params)
+                return edit_params.merge(new_params)
             end
         else
             return nil
@@ -72,12 +72,16 @@ class UsersController < ApplicationController
 
     private 
 
-    def user_params 
+    def edit_params 
         params.require(:user).permit(:username,:email)
     end
 
     def password_params 
         params.require(:user).permit(:old_password,:password)
+    end
+
+    def user_params
+        params.require(:user).permit(:username, :email, :password)
     end
 
 end

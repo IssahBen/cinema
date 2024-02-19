@@ -1,38 +1,54 @@
-  
-<% if @user_searched %> 
-  <div class="container text-center">
-                
-        <div class="row">          
-         <% @links.each_with_index do |link,i|%>
-            <div class="col">
-               
-                    <div  id="card" class="card" style="width: 18rem;">
-                        <a href= "<%= @urls[i] %>"><img src= "<%= link %>" class="card-img-top" alt="..."></a>
-                        <div class="card-body bg-warning">
-                            <p class="card-text"> <%=@title[i] %>:<%=@type[i] %></p>
-                        </div>
-                        <%= form_with model: @bucket,method: :patch,local: true do |f|%>
-                           
-                            <%= f.text_field  :Movie_Name, class: "form-fields" ,placeholder:"Movie Name"%>
-                            <%=f.submit "Add",class: "form-fields" %>
+<div class="main-container"> 
+    <% if @user_searched %> 
+        <div class="container text-center">
+                    
+            <div class="" id='iteration-container'>          
+                <% @links.each_with_index do |link,i|%>
+                    <div class=" before-search-card">
+                    
+                            <div  id="card" class=" search-card-container card" style="width: 18rem;">
+                            
+                                    <div class=" search-card card-body ">
+                                    <a href= "<%= @urls[i] %>"><img src= "<%= link %>" class="card-img-top" alt="..."></a>
+                                        <p class="card-text"> <%=@title[i] %>:<%=@type[i] %></p>
+                                        
+                                      <%= form_with model: @bucket,method: :patch,class: "add-form",local: true do |f|%>
+                                    
+                                        <%= f.hidden_field :post_id,value: @title[i] %>
+                                        
+                                            <%= f.button nil, class: "btn btn-light" do %>
+                                                Add <i class="fa-solid fa-bucket"></i>
+                                            <% end %>
+                                    
+                                    
+                                    
 
-                        <% end %>    
+                                    <% end %>
+
+                                </div>
+                                 
+
+                                 
+                            </div>
+                        
                     </div>
-                   
+                <% end %>  
             </div>
-        <% end %>  
         </div>
-    </div>
-<% else %>
-    <div class="bucket-movies">
-        <% current_bucket.movies.each do |movie| %>
-            <div class="card" style="width: 18rem;">
-                <img src="https://www.allrecipes.com/thmb/k6nF0nelVm_GpVwdMp7fFhdf-FU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/590551-chocolate-popcorn-Alberta-Rose-4x3-1-e6674ab41df9415696ead826c775d911.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text"><%=movie.title %> <a href=<%=movie.stream_link %> >Stream</a></p>
-                    <%=button_to :remove,movie_path(movie),class: "remove-button" ,method: :delete %>
+    <% else %>
+    <div class="bucket-container">
+        <div class="bucket-movies">
+            <% current_bucket.movies.each do |movie| %>
+                <div class=" movie-card card" style="width: 18rem;">
+                    <img src="https://www.allrecipes.com/thmb/k6nF0nelVm_GpVwdMp7fFhdf-FU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/590551-chocolate-popcorn-Alberta-Rose-4x3-1-e6674ab41df9415696ead826c775d911.jpg" class="card-img-top" alt="...">
+                    <div class=" card-body">
+                        <p class="card-text"><%=movie.title %> :</p>
+                         <a href=<%=movie.stream_link %> >Stream</a>
+                        <%=button_to :Remove,movie_path(movie),class: "btn btn-secondary" ,method: :delete %>
+                    </div>
                 </div>
-            </div>
-        <% end %> 
-    </div>   
-<% end %>
+            <% end %> 
+        </div>  
+    </div>     
+    <% end %>
+</div>

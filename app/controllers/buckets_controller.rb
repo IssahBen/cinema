@@ -23,9 +23,9 @@ class BucketsController < ApplicationController
     end
 
     def update 
-        @movie= Movie.new(title: params[:Movie_Name], stream_link: "http://www.omdbapi.com/?apikey=cae79c94&s=#{params[:id]}")
+        @movie= Movie.new(title: params[:Movie_Name], stream_link: "https://ww4.fmovies.co/search/?q=#{params[:Movie_Name]}")
         @movie.bucket=current_bucket
-        byebug
+       
         if @movie.save 
             redirect_to current_bucket
         end
