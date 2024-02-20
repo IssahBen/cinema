@@ -10,5 +10,5 @@ class User < ApplicationRecord
 
     has_secure_password
 
-    has_many :buckets
+    has_many :buckets,dependent: :destroy
 end

@@ -101,6 +101,7 @@
 
 .movie-card img {
     height: 50%;
+
 }
 
 .search-card img {
@@ -127,4 +128,21 @@
 .before-search-card {
     background-color: black;
     height: fit-content;
+}
+
+.edit {
+    padding-top: 7px;
+    padding-right: 7px;
+    position: absolute;
+    right: 35%;
+    top: 25%;
+    display: none;
+}
+
+.edit i {
+    font-size: 100px;
+}
+
+.search-card:hover .edit {
+    display: block;
 }

@@ -23,7 +23,8 @@ class BucketsController < ApplicationController
     end
 
     def update 
-        @movie= Movie.new(title: params[:Movie_Name], stream_link: "https://ww4.fmovies.co/search/?q=#{params[:Movie_Name]}")
+        byebug
+        @movie= Movie.new(title: params[:title], stream_link: "https://ww4.fmovies.co/search/?q=#{params[:title]}",src: params[:src])
         @movie.bucket=current_bucket
        
         if @movie.save 

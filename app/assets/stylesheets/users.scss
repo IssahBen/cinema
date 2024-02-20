@@ -6,19 +6,29 @@
 }
 
 .card {
-    height: 50vh;
+    height: 50%;
+    margin-bottom: 20px;
+    border-radius: 20%;
 
+}
+
+.card img {
+    height: 300px;
 }
 
 .maincard {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    background-color: black;
 }
 
 .title {
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #BF3131;
+    font-size: 100px;
+
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .btn {

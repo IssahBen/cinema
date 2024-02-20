@@ -6,7 +6,11 @@
       <div class="maincard">
         <% @buckets.each do |bucket| %>
           <div class="card text-center" style="width: 18rem;">
+          <% unless bucket.movies.empty? %>
+            <img src=<%=bucket.movies[0].src.present? ? "#{bucket.movies[0].src}" :"https://thumbs.dreamstime.com/b/cinema-concept-paper-bucket-popcorn-film-tape-movie-eps-illustration-41160365.jpg" %> class="card-img-top" alt="...">
+          <% else %>
             <img src="https://thumbs.dreamstime.com/b/cinema-concept-paper-bucket-popcorn-film-tape-movie-eps-illustration-41160365.jpg" class="card-img-top" alt="...">
+          <% end %>
             <div class="card-body">
               <h5 class="card-title"><%= bucket.title %></h5>
               <p class="card-text"><%= bucket.description %></p>

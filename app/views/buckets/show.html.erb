@@ -9,20 +9,7 @@
         <% end %>
        
     </div>
- <%  unless @user_searched %>
-    <div class="search_bar">
-        <%= form_with model: @bucket, class: "add-form" ,method: :patch,local: true do |f|%>
-                            
-                                <%= f.text_field  :Movie_Name, class: "form-field" ,placeholder:"Movie Name"%>
-                                <%=f.submit "Add Movie/Show",class: " btn  btn-secondary form-field-add" %>
-
-        <% end %> 
-
-    </div>    
-
-        
-
-   <% end %>      
+     
    
 
 

@@ -3,5 +3,5 @@ class Bucket < ApplicationRecord
     validates :description, presence: true
 
     belongs_to :user
-    has_many :movies
+    has_many :movies,dependent: :destroy
 end
