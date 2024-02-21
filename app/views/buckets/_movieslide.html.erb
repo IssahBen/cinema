@@ -1,18 +1,18 @@
 <div class="main-container"> 
     <% if @user_searched %> 
-        <div class="container text-center">
-                    
-            <div class="" id='iteration-container'>          
+        <div class = "container text-center">
+                     
+            <div class ="" id='iteration-container'>          
                 <% @links.each_with_index do |link,i|%>
-                    <div class=" before-search-card">
+                    <div class = " before-search-card">
                     
-                            <div  id="card" class=" search-card-container card" style="width: 18rem;">
+                            <div  id = "card" class=" search-card-container card" style="width: 18rem;">
                             
-                                    <div class=" search-card card-body ">
+                                    <div class = " search-card card-body ">
                                     <img src= "<%= link %>" class="card-img-top" alt="...">
-                                      	<div class="edit"><a href="<%= @urls[i]%>"><i class="fa-solid fa-play"></i></a></div>
+                                      	<div class = "edit"><a href="<%= @urls[i]%>"><i class="fa-solid fa-play"></i></a></div>
 
-                                        <p class="card-text"> <%=@title[i] %>:<%=@type[i] %></p>
+                                        <p class = "card-text"> <%=@title[i] %>:<%=@type[i] %></p>
                                         
                                       <%= form_with model: @bucket,method: :patch,class: "add-form",local: true do |f|%>
                                        
@@ -39,16 +39,16 @@
             </div>
         </div>
     <% else %>
-    <div class="bucket-container">
-        <div class="bucket-movies">
+    <div class = "bucket-container">
+        <div class = "bucket-movies">
             <% current_bucket.movies.each do |movie| %>
-                <div class=" movie-card card" id="movie-card" style="width: 18rem;">
+                <div class = " movie-card card" id="movie-card" style="width: 18rem;">
                     
-                    <img src= <%= movie.src.present? ? "#{movie.src}" : "https://www.allrecipes.com/thmb/k6nF0nelVm_GpVwdMp7fFhdf-FU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/590551-chocolate-popcorn-Alberta-Rose-4x3-1-e6674ab41df9415696ead826c775d911.jpg" %> class="card-img-top" alt="...">
-                    <div class=" card-body">
-                        <p class="card-text"><%=movie.title %> :</p>
-                         <a href=<%=movie.stream_link %> >Stream</a>
-                        <%=button_to :Remove,movie_path(movie),class: "btn btn-secondary" ,method: :delete %>
+                    <img src = <%= movie.src.present? ? "#{movie.src}" : "https://www.allrecipes.com/thmb/k6nF0nelVm_GpVwdMp7fFhdf-FU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/590551-chocolate-popcorn-Alberta-Rose-4x3-1-e6674ab41df9415696ead826c775d911.jpg" %> class="card-img-top" alt="...">
+                    <div class = " card-body">
+                        <p class = "card-text"><%=movie.title %> :</p>
+                         <a href = <%= movie.stream_link %> >Stream</a>
+                        <%= button_to :Remove,movie_path(movie),class: "btn btn-secondary" ,method: :delete %>
                     </div>
                 </div>
             <% end %> 

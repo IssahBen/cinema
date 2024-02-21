@@ -2,15 +2,17 @@
                 
 
         <% @links.each_with_index do |link,i|%>
-            <div class="col">
+            <div class = "col">
                 
                     <div class="card" style="width: 18rem;">
-                        <a href= "<%= @urls[i] %>"><img src= "<%= link %>" class="card-img-top" alt="..."></a>
-                        <div class="card-body bg-warning">
-                            <p class="card-text"> <%=@title[i] %>:<%=@type[i] %></p>
+                        
+                        <div class = "card-body " id="card-body">
+                         <img src= "<%= link %>" class="card-img-top" alt="...">
+                        <div class = "play-button"><a href="<%= @urls[i]%>"><i class="fa-solid fa-play"></i></a></div>
+                            <p class = "card-text"> <%=@title[i] %>:<%=@type[i] %></p>
                         </div>
                     </div>
                 
             </div>
         <% end %>
-</div>  
+</div>   

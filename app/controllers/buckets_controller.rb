@@ -1,17 +1,17 @@
 class BucketsController < ApplicationController
         before_action :require_user, only: [:show]
     def new 
-        @bucket=Bucket.new
+        @bucket = Bucket.new
     end
 
     def show 
             
            
             
-            query= params[:query]
-            bucket_id= params[:id]
-            session[:bucket_id]= bucket_id
-            @user_searched= true if query
+            query = params[:query]
+            bucket_id = params[:id]
+            session[:bucket_id] = bucket_id
+            @user_searched = true if query
             if @user_searched
 
                 search(query)   
@@ -24,8 +24,8 @@ class BucketsController < ApplicationController
 
     def update 
         byebug
-        @movie= Movie.new(title: params[:title], stream_link: "https://ww4.fmovies.co/search/?q=#{params[:title]}",src: params[:src])
-        @movie.bucket=current_bucket
+        @movie = Movie.new(title: params[:title], stream_link: "https://ww4.fmovies.co/search/?q=#{params[:title]}",src: params[:src])
+        @movie.bucket = current_bucket
        
         if @movie.save 
             redirect_to current_bucket
@@ -33,10 +33,10 @@ class BucketsController < ApplicationController
     end
 
     def create 
-        bucket=Bucket.new(bucket_params)
-        bucket.user=current_user
+        bucket = Bucket.new(bucket_params)
+        bucket.user = current_user
         if bucket.save 
-            flash[:notice]="Bucket Added"
+            flash[:notice] = "Bucket Added"
             redirect_to bucket
         else
             render "new"
@@ -45,11 +45,11 @@ class BucketsController < ApplicationController
 
     def destroy 
       
-        if @bucket=Bucket.find_by(id: params[:id])
+        if @bucket = Bucket.find_by(id: params[:id])
             @bucket.destroy
         redirect_to user_path(current_user)
         else 
-            flash[:notice]="Bucket Deleted successfully"
+            flash[:notice] = "Bucket Deleted successfully"
             redirect_to user_path(current_user)
         end
     end
