@@ -111,6 +111,25 @@
         display: block;
     }
 
+    .play-button i {
+        font-size: 50px;
+    }
+
+    .play-button {
+        padding-top: 7px;
+        padding-right: 7px;
+        position: absolute;
+        right: 20%;
+        top: 25%;
+        display: none;
+    }
+
+
+
+    .card-body:hover .play-button {
+        display: block;
+    }
+
 
 
 
