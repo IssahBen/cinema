@@ -24,3 +24,102 @@
     height: auto;
     overflow: scroll;
 }
+
+@media (max-width: 500px) {
+    .paragraph {
+        font-size: x-small;
+
+    }
+
+    .paragraph-title {
+        font-size: small;
+    }
+
+
+    body {
+        display: block;
+        padding: 10px;
+
+    }
+
+    .maincontainer {
+        width: 100%;
+        padding: 10px;
+
+    }
+
+    .movies {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .col {
+        font-size: xx-small;
+        width: 120px;
+
+    }
+
+    .col img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card {
+        width: 120px;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    #iteration-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+
+    .search-card img {
+        height: 200px;
+        width: 110px;
+
+    }
+
+    .search-card {
+        font-size: x-small
+    }
+
+    .before-search-card {
+        height: 50%;
+    }
+
+    .edit i {
+        font-size: 50px;
+    }
+
+    .edit {
+        padding-top: 7px;
+        padding-right: 7px;
+        position: absolute;
+        right: 20%;
+        top: 100%;
+
+        display: none;
+
+    }
+
+    .before-search-card:hover .edit {
+        display: block;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -4,11 +4,12 @@
         <% @links.each_with_index do |link,i|%>
             <div class = "col">
                 
-                    <div class="card" style="width: 18rem;">
+                    <div class=" movies-card card" >
                         
                         <div class = "card-body " id="card-body">
                          <img src= "<%= link %>" class="card-img-top" alt="...">
                         <div class = "play-button"><a href="<%= @urls[i]%>"><i class="fa-solid fa-play"></i></a></div>
+
                             <p class = "card-text"> <%=@title[i] %>:<%=@type[i] %></p>
                         </div>
                     </div>

@@ -23,12 +23,15 @@ class BucketsController < ApplicationController
     end
 
     def update 
-        byebug
+       
         @movie = Movie.new(title: params[:title], stream_link: "https://ww4.fmovies.co/search/?q=#{params[:title]}",src: params[:src])
         @movie.bucket = current_bucket
        
         if @movie.save 
             redirect_to current_bucket
+        else
+            flash.now[:alert] = "Movie Already Added"
+            render "show"
         end
     end
 
