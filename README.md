@@ -7,17 +7,17 @@ About:This is the first version of a simple web Application written in Ruby on R
 
 
 FEATURES: 
-            1. Users can search for the latest movies  and stream via a link to a third party website.
-            2.Users can sign up for an account .
-            3.Registered users can create something called a bucket .Every bucket has a title and description.
-            4.Users can add movies to be watch later to their bucket 
-            5.Users can delete their bucket and it associated movies
-            6.Added movies can be removed from the bucket and there is a Stream link attached to every movie card which allows users to stream via a third party service
-            7.Users can edit their account details such as password ,email and Username.
-            8.Web Application is accessible via mobile and other devices 
+            * Users can search for the latest movies  and stream via a link to a third party website.
+            * Users can sign up for an account .
+            * Registered users can create something called a bucket .Every bucket has a title and description.
+            * Users can add movies to be watch later to their bucket 
+            * Users can delete their bucket and it associated movies
+            * Added movies can be removed from the bucket and there is a Stream link attached to every movie card which allows users to stream via a third party service
+            * Users can edit their account details such as password ,email and Username.
+             * Web Application is accessible via mobile and other devices 
 
 
 Features to be included in future versions:
-            1.Allow users to stream movies on the website without redirecting to a third party service
+            *Allow users to stream movies on the website without redirecting to a third party service
 
 
