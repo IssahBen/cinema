@@ -21,7 +21,7 @@ class PagesController < ApplicationController
                     
                 parsed_data["Search"].each do |movie| 
                     @links << movie["Poster"]
-                    @urls << "https://ww4.fmovies.co/search/?q=#{movie["Title"]}"
+                    @urls << "https://fmoviesz.to/filter?keyword=#{movie["Title"]}"
                     @type << movie["Type"]
                     @title << movie["Title"]
                 end 
