@@ -24,21 +24,21 @@
               <%= link_to "Profile[#{current_user.username.upcase}]",user_path(current_user),class:"btn"%>
             </li>
              <% if @redirect_to_page_id %>
-            <li class = "nav-item dropdown">
-                      <a class = "nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                        Actions
-                      </a>
-                     
-                        <ul class = "dropdown-menu">
-                      
-                          <li><a class = "dropdown-item" href="<%=  new_bucket_path %>">Create Bucket</a></li>
+                  <div class = "dropdown"><li class = "nav-item dropdown">
+                            <button = "nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                              Actions
+                            </button>
                           
-                          <li><hr class =  "dropdown-divider"></li>
-                          <li><a class = "dropdown-item" href="<%= edit_user_path%>">Settings</a></li>
+                              <ul class = "dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            
+                                <li><a class = "dropdown-item" href="<%=  new_bucket_path %>">Create Bucket</a></li>
+                                
+                                <li><hr class =  "dropdown-divider"></li>
+                                <li><a class = "dropdown-item" href="<%= edit_user_path%>">Settings</a></li>
 
-                        </ul>
-                     
-            </li>
+                              </ul>
+                          
+                  </li></div>
              <% end %>
          <% end %> 
           <% unless @redirect_to_page_id    %>
