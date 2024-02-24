@@ -72,3 +72,5 @@ gem 'will_paginate', '~> 4.0'
 group :production do 
   gem "pg"
 end
+
+gem 'dotenv-rails'
