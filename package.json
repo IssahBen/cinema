@@ -2,11 +2,14 @@
   "name": "cinema",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-transform-private-methods": "^7.23.3",
+    "@popperjs/core": "^2.11.8",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.4",
-    "bootstrap": "^5.3.2",
+    "bootstrap": "^5.3.3",
     "jquery": "^3.7.1",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0",
@@ -15,6 +18,8 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-private-property-in-object": "^7.23.4",
     "webpack-dev-server": "^3"
   }
 }
