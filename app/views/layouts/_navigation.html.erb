@@ -24,7 +24,7 @@
               <%= link_to "Profile[#{current_user.username.upcase}]",user_path(current_user),class:"btn"%>
             </li>
              <% if @redirect_to_page_id %>
-            <div class = "action-dropdown"><li class = "nav-item dropdown">
+            <li class = "nav-item dropdown">
                       <a class = "nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Actions
                       </a>
@@ -38,7 +38,7 @@
 
                         </ul>
                      
-            </li></div>
+            </li>
              <% end %>
          <% end %> 
           <% unless @redirect_to_page_id    %>
