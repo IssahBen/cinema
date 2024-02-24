@@ -56,7 +56,7 @@ class UsersController < ApplicationController
     end
 
     def change_password
-         old_password=password_params[:old_password]
+         old_password = password_params[:old_password]
          unless old_password == "" 
             @user=User.find(params[:id])
         

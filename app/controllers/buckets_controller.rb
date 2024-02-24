@@ -67,7 +67,7 @@ class BucketsController < ApplicationController
 
     private 
     def search(query)
-            response= Faraday.new("http://www.omdbapi.com/?apikey=cae79c94&s=#{query}")
+            response = Faraday.new("http://www.omdbapi.com/?apikey=cae79c94&s=#{query}")
             parsed_data = JSON.parse(response.get.body)
             @links=[  ]
             @urls= []
@@ -75,7 +75,7 @@ class BucketsController < ApplicationController
             @title= []
             if parsed_data["Search"] 
                 parsed_data["Search"].each do |movie| 
-                    @links<< movie["Poster"]
+                    @links << movie["Poster"]
                     @urls << "https://ww4.fmovies.co/search/?q=#{movie["Title"]}"
                     @type << movie["Type"]
                     @title << movie["Title"]
