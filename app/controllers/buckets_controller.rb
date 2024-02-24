@@ -67,7 +67,7 @@ class BucketsController < ApplicationController
 
     private 
     def search(query)
-            response = Faraday.new("http://www.omdbapi.com/?apikey=cae79c94&s=#{query}")
+            response = Faraday.new("http://www.omdbapi.com/?apikey=#{ENV["API_KEY"]}&s=#{query}")
             parsed_data = JSON.parse(response.get.body)
             @links=[  ]
             @urls= []
