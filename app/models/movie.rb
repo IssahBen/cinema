@@ -1,4 +1,3 @@
 class Movie < ApplicationRecord
-    belongs_to :bucket
-   
+  belongs_to :bucket
 end

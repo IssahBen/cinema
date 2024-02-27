@@ -1,23 +1,17 @@
 Rails.application.routes.draw do
- 
- root "pages#home"
+  root 'pages#home'
 
- get "show", to: "pages#show"
+  get 'show', to: 'pages#show'
 
- get "login", to: "sessions#new"
+  get 'login', to: 'sessions#new'
 
- post "login" ,to: "sessions#create"
+  post 'login', to: 'sessions#create'
 
- delete "logout", to: "sessions#destroy"
+  delete 'logout', to: 'sessions#destroy'
 
- delete "movies/:id", to:"movies#destroy", as: "movie"
+  delete 'movies/:id', to: 'movies#destroy', as: 'movie'
 
+  resources :buckets
 
- resources :buckets
-
- resources :users
-
-
-
- 
+  resources :users
 end
