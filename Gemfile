@@ -76,3 +76,5 @@ end
 gem 'dotenv'
 
 gem 'rubocop', '~> 1.60', require: false
+
+gem 'rubocop-rails', require: false

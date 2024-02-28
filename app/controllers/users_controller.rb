@@ -1,7 +1,18 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :require_user, only: [:show]
+  def show
+    @redirect_to_page_id = true
+    @buckets = current_user.buckets
+  end
+
   def new
     @user = User.new
+  end
+
+  def edit
+    @user = current_user
   end
 
   def create
@@ -15,18 +26,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @redirect_to_page_id = true
-    @buckets = current_user.buckets
-  end
-
-  def edit
-    @user = current_user
-  end
-
   def update
     @user = current_user
-    if change_password != false and !change_password.nil?
+    if (change_password != false) && !change_password.nil?
       if @user.update(change_password)
         flash[:notice] = 'Account Updated'
         redirect_to @user

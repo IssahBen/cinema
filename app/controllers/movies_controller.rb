@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MoviesController < ApplicationController
   def destroy
     @movie = Movie.find(params[:id])

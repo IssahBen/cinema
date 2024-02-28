@@ -1,9 +1,7 @@
+# frozen_string_literal: true
+
 class BucketsController < ApplicationController
   before_action :require_user, only: [:show]
-  def new
-    @bucket = Bucket.new
-  end
-
   def show
     query = params[:query]
     bucket_id = params[:id]
@@ -12,6 +10,21 @@ class BucketsController < ApplicationController
     return unless @user_searched
 
     search(query)
+  end
+
+  def new
+    @bucket = Bucket.new
+  end
+
+  def create
+    bucket = Bucket.new(bucket_params)
+    bucket.user = current_user
+    if bucket.save
+      flash[:notice] = 'Bucket Added'
+      redirect_to bucket
+    else
+      render 'new'
+    end
   end
 
   def update
@@ -30,25 +43,13 @@ class BucketsController < ApplicationController
     end
   end
 
-  def create
-    bucket = Bucket.new(bucket_params)
-    bucket.user = current_user
-    if bucket.save
-      flash[:notice] = 'Bucket Added'
-      redirect_to bucket
-    else
-      render 'new'
-    end
-  end
-
   def destroy
-    if @bucket = Bucket.find_by(id: params[:id])
+    if (@bucket = Bucket.find_by(id: params[:id]))
       @bucket.destroy
-      redirect_to user_path(current_user)
     else
       flash[:notice] = 'Bucket Deleted successfully'
-      redirect_to user_path(current_user)
     end
+    redirect_to user_path(current_user)
   end
 
   private
