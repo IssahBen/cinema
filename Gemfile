@@ -35,6 +35,7 @@ group :development, :test do
   gem 'rubocop', '~> 1.60', require: false
 
   gem 'rubocop-rails', require: false
+    gem 'sqlite3', '~> 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -71,5 +72,8 @@ gem 'pexels', '~> 0.4.0'
 
 gem 'will_paginate', '~> 4.0'
 
- gem "pg"
+group :production do 
+  gem "pg"
+end
+
 
