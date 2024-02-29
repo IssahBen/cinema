@@ -1,38 +1,37 @@
 
- <div> 
- 
+ <div>
+
     <div class = "navbar">
      <div class = "icon">
         <img src='<%= asset_url('icon.png') %>'>
         </div>
-       
-      
+
     </div>
-     <hr class="hr" />
+     <hr class="hr" >
 
     <div class = "header">
         <h1 class = "banner text-center" >Watch Movies Online in HD for Free!</h1>
     </div>
-    <hr class = "hr" />
-  
+    <hr class = "hr" >
+
     <div class = "form">
        <%= form_with url: show_path,class: "search-form", method: :get do |form| %>
             <div class = "forminput mb-3">
-                
+
                 <%= form.text_field :query,class: " search-field",placeholder: "Movies and Shows" %>
                 <%= form.submit  "Search",class: " search-btn btn btn-secondary btn-lg" %>
-            </div>   
+            </div>
         <% end %>
     </div>
-      
-    <hr class = "hr" />
+
+    <hr class = "hr" >
 </div>
 
-<div class="about "> 
+<div class="about ">
     <h3 class= "paragraph-title">Cinema - Watch Movies Online for FREE</h3>
 
     <p class= "paragraph">Cinema - the ultimate online movie streaming website that brings the magic of cinema to your fingertips. With a vast and diverse database, as well as a multitude of exciting features, Cinema offers an unparalleled movie-watching experience for film enthusiasts worldwide.</p>
-    
+
      <p class= "paragraph">At Cinema, we take pride in our extensive database that encompasses a wide range of movies from various genres, eras, and countries. From Hollywood blockbusters to independent gems, we have something for everyone. Our database is continuously updated with the latest releases, ensuring that you stay up-to-date with the hottest films in the industry.</p>
 
     <p class= "paragraph">One of the standout features of Cinema is our personalized recommendation system. Our sophisticated algorithms analyze your viewing history, preferences, and ratings to curate a customized list of movie recommendations tailored specifically to your tastes. Discover new films you'll love and embark on exciting cinematic adventures you never knew existed.</p>
@@ -44,9 +43,4 @@
 
     <p class="paragraph">In summary, Cinema is the ultimate online movie streaming destination, offering a vast database, personalized recommendations, high-quality streaming, device compatibility, and an engaging community. Prepare to be captivated by the world of cinema as you embark on a cinematic journey like no other. Welcome to FMovies, where movies come to life.</p>
 
-
 </div>
-
-
-
-  
