@@ -1,21 +1,14 @@
-    
+
     <div class= "form">
-        
+
        <%= form_with url: bucket_path,method: :get do |form| %>
             <div class= "forminput mb-3">
                  <p class=" note text-center"> Search for movies/Series to  Add to bucket </p>
                 <%= form.text_field :query,class: " form-field search-field form-control" %>
                 <%= form.submit  "Search",class: "btn btn-secondary" %>
-            </div>   
+            </div>
         <% end %>
-       
+
     </div>
-     
-   
 
-
-
-   <%= render "movieslide"%>
-  
-
-    
+   <%= render "movieslide" %>
