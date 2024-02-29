@@ -29,7 +29,13 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
-  gem 'sqlite3', '~> 1.4'
+
+  gem 'dotenv'
+
+  gem 'rubocop', '~> 1.60', require: false
+
+  gem 'rubocop-rails', require: false
+    gem 'sqlite3', '~> 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -58,19 +64,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'faraday', '~> 2.7', '>= 2.7.11'
 
-
- 
-
-
 gem 'bcrypt', '~> 3.1', '>= 3.1.5'
 
 gem 'bootstrap', '~> 5.2', '>= 5.2.3'
 
 gem 'pexels', '~> 0.4.0'
+
 gem 'will_paginate', '~> 4.0'
 
 group :production do 
   gem "pg"
 end
 
-gem 'dotenv'
