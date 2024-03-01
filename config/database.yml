@@ -4,8 +4,16 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
+
+# TODO:
+# as long as you are using sqlite for development and test envs
+# the default configs are not working correctly because default adapter is postgres
+# to fix it you should specify postgres specifically for production env
+# or you could leave postgres as default but then you'll need to repeat yourself and specify 
+# sqlite twice for test and development
+
 default: &default
-  adapter: postgresql
+  adapter: postgresql # change to sqlite3
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
@@ -23,4 +31,5 @@ test:
 
 production:
   <<: *default
+  # adapter: postgresql
   database: cinema_production
