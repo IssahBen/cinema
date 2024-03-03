@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home; end
 
   def show
-    query = params[:query]
+    query = params[:query].strip
     response = Faraday.new("http://www.omdbapi.com/?apikey=#{ENV.fetch('API_KEY', nil)}&s=#{query}")
     parsed_data = JSON.parse(response.get.body)
     @links = []
