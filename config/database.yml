@@ -5,8 +5,8 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: postgresql   # replace adaper with adapter: sqlite3  to set up for development
+  encoding: unicode     # remove the encoding line to set up for development
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
