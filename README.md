@@ -21,3 +21,18 @@ About:This is the first version of a simple web Application written in Ruby on R
 * Allow users to stream movies on the website without redirecting to a third party service
 
 
+..*Steps to Reproduce the code in  the development in Environment
+* 1 Go to config/database.yml
+* Replace 
+ " default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000 "   
+   with
+    " default: &default 
+   adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000 "
+
+
