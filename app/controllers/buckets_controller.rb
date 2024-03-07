@@ -3,7 +3,7 @@
 class BucketsController < ApplicationController
   before_action :require_user, only: [:show]
   def show
-    query = params[:query].strip
+    query = params[:query]
     bucket_id = params[:id]
     session[:bucket_id] = bucket_id
     @user_searched = true if query
