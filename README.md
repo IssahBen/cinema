@@ -23,13 +23,14 @@ About:This is the first version of a simple web Application written in Ruby on R
 
 ..*Steps to Reproduce the code in  the development in Environment
 * 1 Go to config/database.yml
+*  gem 'sqlite3', '~> 1.4' is already in the gem file so you wouldn't need to add it 
 * Replace    
    default: &default  
    adapter: postgresql  
    encoding: unicode  
    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>  
    timeout: 5000  
-* with
+* with  
    default: &default   
    adapter: sqlite3  
    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>  
