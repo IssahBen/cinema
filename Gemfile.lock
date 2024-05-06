@@ -164,7 +164,6 @@ GEM
       racc
     pexels (0.4.0)
       requests (~> 1.0.2)
-    pg (1.5.5)
     popper_js (2.11.8)
     public_suffix (5.0.4)
     puma (5.6.8)
@@ -316,7 +315,6 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pexels (~> 0.4.0)
-  pg
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.7, >= 6.1.7.6)
@@ -325,7 +323,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   spring
-  sqlite3 (~> 1.4)
+  sqlite3
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

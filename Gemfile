@@ -6,7 +6,7 @@ ruby '3.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.6'
 # Use sqlite3 as the database for Active Record
-
+gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -36,7 +36,7 @@ group :development, :test do
   gem 'rubocop', '~> 1.60', require: false
 
   gem 'rubocop-rails', require: false
-    gem 'sqlite3', '~> 1.4'
+    
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -73,7 +73,5 @@ gem 'pexels', '~> 0.4.0'
 
 gem 'will_paginate', '~> 4.0'
 
-group :production do 
-  gem "pg"
-end
+
 
